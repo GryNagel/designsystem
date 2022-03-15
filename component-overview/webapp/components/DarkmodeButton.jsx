@@ -11,8 +11,8 @@ export default function DarkmodeButton() {
                 <body
                     className={
                         prefersDarkMode
-                            ? 'sb1ds-body native regard-color-scheme-preference'
-                            : 'sb1ds-body'
+                            ? 'sb1ds-body ffe-body-text native regard-color-scheme-preference'
+                            : 'sb1ds-body ffe-body-text'
                     }
                 />
             </Helmet>
