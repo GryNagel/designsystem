@@ -1,24 +1,4 @@
-:root {
-    --toc-column-count: 1;
-}
-
-@media (min-width: 768px) {
-    :root {
-        --toc-column-count: 2;
-    }
-}
-
-@media (min-width: 1024px) {
-    :root {
-        --toc-column-count: 3;
-    }
-}
-
-@media (min-width: 1280px) {
-    :root {
-        --toc-column-count: 4;
-    }
-}
+@import 'styles/sb1ex-toc.css';
 
 body {
     margin: 0;
@@ -44,22 +24,6 @@ body {
     background-color: var(--ffe-farge-hvit);
     color: var(--ffe-farge-fjell);
     padding: 18px 12px 0;
-}
-
-.sb1ex-toc {
-    column-count: var(--toc-column-count);
-}
-
-.sb1ex-toc__group {
-    break-inside: avoid;
-}
-
-.sb1ex-toc__example-list {
-    padding-bottom: 32px;
-}
-
-.sb1ex-toc__example-list-item {
-    margin-bottom: 6px;
 }
 
 .sb1ex-live__preview,
@@ -98,16 +62,6 @@ body {
 
 .sb1ex-aside__example-id {
     text-align: right;
-}
-
-.sb1ex-toc____example-list-item a:not(h1, h2, h3, h4, h5, h6) {
-    color: var(--ffe-farge-vann);
-}
-.sb1ex-toc____example-list-item a:not(h1, h2, h3, h4, h5, h6):hover {
-    color: var(--ffe-farge-fjell);
-}
-.sb1ex-toc____example-list-item a:not(h1, h2, h3, h4, h5, h6):visited {
-    color: var(--ffe-farge-lyng);
 }
 
 @media (prefers-color-scheme: dark) {
