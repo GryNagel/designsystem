@@ -17,13 +17,13 @@
     padding: 6px @ffe-spacing-sm 6px @ffe-spacing-2xl;
     position: relative;
     background-color: @ffe-farge-hvit;
-    border: 2px solid @ffe-farge-graa-wcag;
+    border: 2px solid @ffe-var-border-color;
     border-radius: 22px;
     display: inline-block;
     min-width: 100px;
     text-align: left;
-    color: @ffe-farge-vann;
-    font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
+    color: @ffe-var-primary-color;
+    font-family: @ffe-var-font;
     font-variant-numeric: tabular-nums;
     cursor: pointer;
     transition: all @ffe-transition-duration @ffe-ease;
@@ -35,7 +35,7 @@
         @media (prefers-color-scheme: dark) {
             background-color: @ffe-farge-svart;
             color: @ffe-farge-hvit;
-            border-color: @ffe-farge-graa;
+            border-color: @ffe-var-border-color-dark;
         }
     }
 
@@ -43,8 +43,8 @@
         .ffe-sb1-radioblob();
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-grey-cloud-darkmode;
-                background-color: @ffe-grey-darkmode;
+                border-color: @ffe-var-border-color-dark;
+                background-color: @ffe-farge-graa;
             }
         }
 
@@ -53,10 +53,10 @@
     }
 
     &.ffe-radio-button--invalid {
-        border-color: @ffe-orange-fire;
+        border-color: @ffe-farge-baer-wcag;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-red-darkmode;
+                border-color: @ffe-farge-baer;
             }
         }
     }
@@ -78,7 +78,7 @@
     &:checked + .ffe-radio-switch {
         /* stylelint-disable-next-line selector-max-specificity */
         &:not(.ffe-radio-button--invalid) {
-            border-color: @ffe-farge-fjell;
+            border-color: @ffe-var-secondary-color;
             .native & {
                 @media (prefers-color-scheme: dark) {
                     border-color: @ffe-farge-vann-70;
@@ -86,8 +86,8 @@
             }
         }
 
-        background-color: @ffe-farge-fjell;
-        color: @ffe-white;
+        background-color: @ffe-var-secondary-color;
+        color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-farge-vann-70;
@@ -97,7 +97,7 @@
     }
 
     &:hover + .ffe-radio-switch {
-        border-color: @ffe-farge-fjell;
+        border-color: @ffe-var-secondary-color;
         .native & {
             @media (prefers-color-scheme: dark) {
                 border-color: @ffe-farge-vann-70;
@@ -106,7 +106,7 @@
     }
 
     &:focus + .ffe-radio-switch {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
+        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-var-primary-color;
 
         .native & {
             @media (prefers-color-scheme: dark) {
@@ -119,7 +119,7 @@
     /* stylelint-disable-next-line selector-max-specificity */
     &:checked + .ffe-radio-switch::before {
         border: 5px solid @ffe-farge-hvit;
-        background: @ffe-farge-vann;
+        background: @ffe-var-primary-color;
         .native & {
             @media (prefers-color-scheme: dark) {
                 border-color: @ffe-farge-svart !important;

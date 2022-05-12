@@ -30,7 +30,7 @@
 // Styleguide ffe-form.radio-block
 
 .ffe-radio-block {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: @ffe-var-font;
     font-variant-numeric: tabular-nums;
     margin-top: @ffe-spacing-md;
     width: 100%;
@@ -39,8 +39,8 @@
     &__content {
         width: 100%;
         position: relative;
-        border: 2px solid @ffe-farge-graa-wcag;
-        border-radius: 5px;
+        border: 2px solid @ffe-var-border-color;
+        border-radius: @ffe-var-border-radius;
         display: inline-block;
         margin-right: @ffe-spacing-xs;
         color: @ffe-black;
@@ -50,7 +50,7 @@
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                border: 2px solid @ffe-farge-graa;
+                border: 2px solid @ffe-var-border-color-dark;
                 color: @ffe-farge-hvit;
                 background: @ffe-farge-svart;
             }
@@ -67,7 +67,7 @@
         .native &::before {
             @media (prefers-color-scheme: dark) {
                 background: none;
-                border-color: @ffe-white-darkmode;
+                border-color: @ffe-farge-hvit;
             }
         }
     }
@@ -102,7 +102,7 @@
 
     &:hover {
         .ffe-radio-block__content {
-            border-color: @ffe-farge-fjell;
+            border-color: @ffe-var-secondary-color;
 
             .native & {
                 @media (prefers-color-scheme: dark) {
@@ -112,7 +112,7 @@
         }
 
         .ffe-radio-block__header {
-            border-color: @ffe-farge-fjell;
+            border-color: @ffe-var-secondary-color;
 
             .native & {
                 @media (prefers-color-scheme: dark) {
@@ -154,11 +154,11 @@
     }
 
     &:checked + .ffe-radio-block__content {
-        border: 2px solid @ffe-farge-fjell;
+        border: 2px solid @ffe-var-secondary-color;
 
         > .ffe-radio-block__header {
-            border-bottom: thin solid @ffe-farge-fjell;
-            background-color: @ffe-farge-fjell;
+            border-bottom: thin solid @ffe-var-secondary-color;
+            background-color: @ffe-var-secondary-color;
             color: @ffe-farge-hvit;
         }
     }
@@ -180,14 +180,14 @@
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                border: 5px solid @ffe-white-darkmode;
-                background: @ffe-blue-azure;
+                border: 5px solid @ffe-farge-hvit;
+                background: @ffe-farge-vann-70;
             }
         }
     }
 
     &:focus + .ffe-radio-block__content {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
+        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-var-primary-color;
 
         .native & {
             @media (prefers-color-scheme: dark) {

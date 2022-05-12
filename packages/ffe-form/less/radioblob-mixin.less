@@ -4,7 +4,7 @@
 .ffe-sb1-radioblob() {
     content: '';
     background-color: @ffe-farge-hvit;
-    border: 2px solid @ffe-farge-graa-wcag;
+    border: 2px solid @ffe-var-border-color;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -13,7 +13,7 @@
     .native & {
         @media (prefers-color-scheme: dark) {
             background-color: @ffe-farge-svart !important;
-            border-color: @ffe-farge-graa !important;
+            border-color: @ffe-var-border-color-dark !important;
         }
     }
 }
@@ -22,7 +22,7 @@
     Radioblob: Active state of the blob
 */
 .ffe-sb1-radioblob-active() {
-    background-color: @ffe-farge-vann;
+    background-color: @ffe-var-primary-color;
     border: 5px solid @ffe-farge-hvit;
     .native & {
         @media (prefers-color-scheme: dark) {

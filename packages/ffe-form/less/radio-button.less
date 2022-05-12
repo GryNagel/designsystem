@@ -20,7 +20,7 @@
 // Styleguide ffe-form.radio-button
 
 .ffe-radio-button {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: @ffe-var-font;
     font-variant-numeric: tabular-nums;
     display: block;
     position: relative;
@@ -96,7 +96,7 @@
 
     &::after {
         content: '';
-        border: 2px solid @ffe-farge-graa-wcag;
+        border: 2px solid @ffe-var-border-color;
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -107,7 +107,7 @@
         transition: all @ffe-transition-duration @ffe-ease;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-graa;
+                border-color: @ffe-var-border-color-dark;
             }
         }
     }
@@ -134,16 +134,16 @@
 
     &:checked + .ffe-radio-button::after,
     &:hover + .ffe-radio-button::after {
-        border-color: @ffe-farge-vann;
+        border-color: @ffe-var-primary-color;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-70;
+                border-color: @ffe-var-primary-color-dark;
             }
         }
     }
 
     &:checked + .ffe-radio-button::before {
-        background-color: @ffe-farge-vann;
+        background-color: @ffe-var-primary-color;
         border: 5px solid @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
@@ -154,7 +154,7 @@
     }
 
     &:focus + .ffe-radio-button::after {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
+        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-var-primary-color;
 
         .native & {
             @media (prefers-color-scheme: dark) {
