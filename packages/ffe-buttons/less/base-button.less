@@ -46,11 +46,11 @@
     align-items: center;
     appearance: none;
     border: 2px solid transparent;
-    border-radius: 6em;
+    border-radius: @ffe-var-border-radius-buttons;
     color: @ffe-farge-hvit;
     cursor: pointer;
     display: flex;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: @ffe-var-font;
     justify-content: center;
     line-height: 24px;
     overflow: hidden;
@@ -102,7 +102,7 @@
     }
 
     &:visited {
-        color: @ffe-white;
+        color: @ffe-farge-hvit;
     }
 
     @media (min-width: @breakpoint-sm) {
@@ -112,59 +112,61 @@
 }
 
 .ffe-button--action {
-    background-color: @ffe-farge-nordlys-wcag;
+    background-color: @ffe-var-button-action;
+    color: @ffe-var-button-text;
 
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-nordlys;
+            background-color: @ffe-var-button-action-dark;
             border: 2px solid transparent;
-            color: @ffe-farge-svart;
+            color: @ffe-var-button-text-dark;
         }
     }
     &:focus {
-        background-color: @ffe-farge-nordlys-wcag;
+        background-color: @ffe-var-button-action;
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-nordlys;
+                background-color: @ffe-var-button-action-dark;
             }
         }
     }
 
     &:hover {
-        background-color: @ffe-farge-skog;
+        background-color: @ffe-var-button-action-hover;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-nordlys-30;
+                background-color: @ffe-var-button-action-hover-dark;
             }
         }
     }
 }
 
 .ffe-button--primary {
-    background-color: @ffe-farge-vann;
+    background-color: @ffe-var-button-primary;
+    color: @ffe-var-button-text;
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-vann-70;
-            color: @ffe-farge-svart;
+            background-color: @ffe-var-button-primary-dark;
+            color: @ffe-var-button-text-dark;
         }
     }
 
     &:focus {
-        background-color: @ffe-farge-vann;
+        background-color: @ffe-var-button-primary;
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-70;
+                background-color: @ffe-var-button-primary-dark;
             }
         }
     }
 
     &:hover {
-        background-color: @ffe-farge-fjell;
+        background-color: @ffe-var-button-primary-hover;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
+                background-color: @ffe-var-button-primary-hover-dark;
             }
         }
     }
@@ -173,26 +175,26 @@
 .ffe-button--secondary,
 .ffe-button--shortcut,
 .ffe-button--expand {
-    background-color: @ffe-farge-hvit;
-    border: solid 2px @ffe-farge-vann;
-    color: @ffe-farge-vann;
+    background-color: @ffe-var-button-secondary-bg;
+    border: solid 2px @ffe-var-button-secondary;
+    color: @ffe-var-button-secondary;
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-vann-30;
-            background-color: @ffe-farge-svart;
-            border-color: @ffe-farge-vann-70;
+            color: @ffe-var-button-secondary-dark;
+            background-color: @ffe-var-button-secondary-bg-dark;
+            border-color: @ffe-var-button-secondary-dark;
         }
     }
 
     &:active,
     &:focus,
     &:visited {
-        color: @ffe-farge-vann;
+        color: @ffe-var-button-secondary;
 
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: transparent;
-                color: @ffe-farge-vann-30;
+                color: @ffe-var-button-secondary-dark;
             }
         }
     }
@@ -201,22 +203,22 @@
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: transparent;
-                border-color: @ffe-farge-vann-70;
-                color: @ffe-farge-vann-30;
+                border-color: @ffe-var-button-secondary-dark;
+                color: @ffe-var-button-secondary-hover-dark;
             }
         }
     }
 
     &:hover {
-        background-color: @ffe-farge-vann;
-        border-color: @ffe-farge-vann;
-        color: @ffe-farge-hvit;
+        background-color: @ffe-var-button-secondary;
+        border-color: @ffe-var-button-secondary;
+        color: @ffe-var-button-secondary-bg;
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-70;
-                border-color: @ffe-farge-vann-70;
-                color: @ffe-farge-svart;
+                background-color: @ffe-var-button-secondary-dark;
+                border-color: @ffe-var-button-secondary-dark;
+                color: @ffe-var-button-secondary-bg-dark;
             }
         }
     }
