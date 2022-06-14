@@ -47,10 +47,6 @@ const ViewExample = ({ history, exampleId, example }) => {
                     <Navigation focusable={showOverlayMenu} />
                 </div>
 
-                <div className="sb1ex-page__main-content">
-                    <LivePreview className="sb1ex-live__preview" />
-                    <LiveError className="sb1ex-live__error" />
-                </div>
                 <div className="sb1ex-page__panels">
                     <Panels
                         {...{
@@ -60,6 +56,11 @@ const ViewExample = ({ history, exampleId, example }) => {
                             setExpandedPanelId,
                         }}
                     />
+                </div>
+
+                <div className="sb1ex-page__main-content">
+                    <LivePreview className="sb1ex-live__preview" />
+                    <LiveError className="sb1ex-live__error" />
                 </div>
             </div>
         </LiveProvider>

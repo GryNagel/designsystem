@@ -1,17 +1,14 @@
 .sb1ex-editor-panels {
     color: var(--ffe-farge-svart);
-    padding: var(--ffe-spacing-2xl) var(--ffe-spacing-sm) var(--ffe-spacing-sm);
+    padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm) var(--ffe-spacing-2xl);
 
     @media (min-width: 1296px) {
-        padding: var(--ffe-spacing-2xl) 0 var(--ffe-spacing-sm);
+        padding: var(--ffe-spacing-xs) 0 var(--ffe-spacing-2xl);
     }
 }
 
-.sb1ex-editor-panels__expand-buttons {
-    padding-bottom: var(--ffe-spacing-xl);
-}
-
 .sb1ex-editor-panels__expanded-content {
+    padding-top: var(--ffe-spacing-sm);
     color: var(--ffe-farge-svart);
     animation: expand-panel 0.2s ease;
 }
